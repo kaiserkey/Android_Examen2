@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_biblioteca">
+
+    <fragment
+        android:id="@+id/nav_biblioteca"
+        android:name="com.example.examen4.ui.biblioteca.BibliotecaFragment"
+        android:label="Biblioteca"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/detalleLibroFragment"
+            app:destination="@id/detalleLibroFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalleLibroFragment"
+        android:name="com.example.examen4.ui.biblioteca.DetalleLibroFragment"
+        android:label="Detalles Del Libro"
+        tools:layout="@layout/fragment_detalle_libro">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_salir"
+        android:name="com.example.examen4.ui.salir.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
